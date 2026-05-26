@@ -10,7 +10,6 @@ Traditional bulk microphysics schemes, such as MG2 and PUMAS, make several simpl
 
 Our goal is to develop ML-based parameterizations using cloud droplet size distribution (DSD) data and atmospheric state variables while preserving physical consistency. We aim to compare traditional physical parameterizations with data-driven approaches and investigate how ML models can be integrated “online” within atmospheric models.
 
-To provide a controlled testing framework, we will explore idealized modeling configurations such as SCAM or KiD and analyze LES/model-generated warm-cloud datasets to study droplet statistics, sedimentation behavior, and microphysical relationships.
 
 ## Goals
 - Understand cloud microphysics and bulk parameterization assumptions
