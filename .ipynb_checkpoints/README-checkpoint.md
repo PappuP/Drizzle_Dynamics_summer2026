@@ -4,7 +4,7 @@ Physics-informed machine learning for cloud microphysics and cloud parameterizat
 
 ## Project Overview
 
-Cloud and climate models cannot explicitly represent every individual cloud droplet within a model grid box. Instead, they rely on bulk microphysics parameterizations that statistically represent the collective behavior of cloud particles. One important component of these schemes is the representation of hydrometeor sedimentation (fall speeds), which strongly influences cloud lifetime, precipitation formation, and vertical transport.
+Climate models cannot explicitly represent every individual cloud droplet within a model grid box. Instead, they rely on bulk microphysics parameterizations that statistically represent the collective behavior of cloud particles. One important component of these schemes is the representation of hydrometeor sedimentation (fall speeds), which strongly influences cloud lifetime, precipitation formation, and vertical transport.
 
 Traditional bulk microphysics schemes, such as MG2 and PUMAS, make several simplifying assumptions, including analytic droplet size distributions and power-law relationships for particle fall speeds. In this project, we explore whether physics-informed machine learning can improve the representation of warm-cloud sedimentation processes and bulk fall speeds.
 
