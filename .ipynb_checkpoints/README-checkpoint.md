@@ -13,12 +13,14 @@ Our goal is to develop ML-based parameterizations using cloud droplet size distr
 To provide a controlled testing framework, we will explore idealized modeling configurations such as SCAM or KiD and analyze LES/model-generated warm-cloud datasets to study droplet statistics, sedimentation behavior, and microphysical relationships.
 
 ## Goals
-
-- Understand cloud microphysics
-- Explore cloud droplet statistical relationships
-- Investigate sedimentation and fall-speed processes in clouds
-- Develop ML-based parameterization ideas
-- Compare physical and ML representations
+- Understand cloud microphysics and bulk parameterization assumptions
+- Explore cloud droplet size distribution (DSD) relationships
+- Investigate sedimentation and particle fall-speed processes
+- Analyze SCM atmospheric model output
+- Develop physics-informed ML-based parameterization ideas
+- Compare traditional physical parameterizations with ML representations
+- Explore online vs offline evaluation of ML microphysics schemes
+  
 
 ## Team
 
