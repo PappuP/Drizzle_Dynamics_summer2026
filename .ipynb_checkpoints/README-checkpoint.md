@@ -1,6 +1,6 @@
 # Drizzle_Dynamics_summer2026
 
-Physics-informed machine learning for warm-cloud microphysics and cloud parameterization.
+Physics-informed machine learning for cloud microphysics and cloud parameterization.
 
 ## Project Overview
 
