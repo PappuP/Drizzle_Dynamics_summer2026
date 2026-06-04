@@ -11,3 +11,11 @@ Follow the instraction given with the code and its straightforward too
 
 
 icase defination is here:KiD-A/src/test_case.f90
+
+
+
+Some git push issue:
+git fetch origin
+git log --oneline --graph --decorate --all -10
+git pull origin main --rebase
+git push origin main
