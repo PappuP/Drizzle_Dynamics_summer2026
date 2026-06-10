@@ -1,9 +1,22 @@
 Kid Source Code:https://github.com/Adehill/KiD-A
 To port the kid model is straightforward task as mention by their documentation given in the github
 Run the model is also easy but auto running scheme fail but the executable create inside: kiD-A/bin_gfortran_ , so namual run of ecuatbale is necsseary from the directory
-Example run:
-make COMPILER=gfortran
+Example Build & run:
+Build:
+make COMPILER=gfortran   
+
+The build command need once, if you change
+MG2 source code
+tau_bin source code  ##for example we added tau code and then we build again
+driver code
+physics modules
+etc
+then you need to rebuild by calling make otherwise just run usinging the command below
+
+Run:
 ./bin_gfortran_/KiD_1D.exe namelists/kida_icmw1D_bulk_template.nml
+
+
 
 Tau Code (Bin Microphysics): https://csl.noaa.gov/staff/graham.feingold/code/
 Follow the instraction given with the code and its straightforward too
