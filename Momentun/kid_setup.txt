@@ -25,6 +25,81 @@ Follow the instraction given with the code and its straightforward too
 
 icase defination is here:KiD-A/src/test_case.f90
 
+Add MG2 code in KiD: # we only enale MG2 so no MG1.5 avaiable 
+in switches.f90
+!,imphys_mg1_5 = 13 &
+,imphys_mg2 = 14
+
+right after 
+imphys_4A = 12
+
+
+in mphys_interface.f90
+!Use mphys_mg1_5, only: mphys_mg1_5_interface
+Use mphys_mg2, only: mphys_mg2_interface
+
+near the other Use mphys_* statements.
+
+Then inside the select case:
+!case(imphys_mg1_5)
+!   call mphys_mg1_5_interface
+
+case(imphys_mg2)
+   call mphys_mg2_interface
+
+
+
+Then copy six files
+cp /data1/pappu/Kid_mg2_dt1n_nz120/src/mphys_mg2.f90 \
+/data1/pappu/KiD-A_tau_mg2/src/
+
+cp /data1/pappu/Kid_mg2_dt1n_nz120/src/module_mp_mg2.f90 \
+/data1/pappu/KiD-A_tau_mg2/src/
+
+cp /data1/pappu/Kid_mg2_dt1n_nz120/src/micro_mg2_0.F90 \
+/data1/pappu/KiD-A_tau_mg2/src/
+
+cp /data1/pappu/Kid_mg2_dt1n_nz120/src/micro_mg_utils.f90 \
+/data1/pappu/KiD-A_tau_mg2/src/
+
+cp /data1/pappu/Kid_mg2_dt1n_nz120/src/wv_sat_methods.f90 \
+/data1/pappu/KiD-A_tau_mg2/src/
+cp /data1/pappu/Kid_mg2_dt1n_nz120/src/shr_spfn_mod.F90 \
+/data1/pappu/KiD-A_tau_mg2/src/
+
+Rename the *.F90 files to *.f90 file 
+
+
+# column_variables.f90 you can do these changes or replace the whole column_variables.f90 file from Mg2 version of Kid
+In this file around line ~45 where atmospheric variables are declared.
+Add exactlythe lines below
+!++ag
+real(kind=wp) ::                          &
+     exner_half(0:nz,0:nx+1)            & ! exner pressure
+    ,pmb_half(0:nz,0:nx+1) = unset_real   ! pressure (mb) on interfaces
+!--ag
+
+# derived_fields.f90 you can do these changes or replace the whole derived_fields.f90 file from Mg2 version of Kid
+modify the USE statement.
+Current:
+Use physconst, only : r_on_cp, g, p0, pi
+
+Replace with:
+Use physconst, only : r_on_cp, g, p0, pi, cp
+
+
+# Edit makefile.inc.
+Find DEFS are defined and add:
+-DNO_CSM_SHARE
+
+
+# in namelist.f90:
+
+add the code below
+case('mg2')
+imphys=imphys_mg2
+mphys_id='mg2'
+
 
 
 Some git push issue:

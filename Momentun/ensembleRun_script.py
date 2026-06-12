@@ -3,6 +3,9 @@
 # make COMPILER=gfortran
 # This script will only work in the KiD directtory
 # You will get your output inside KiD/output
+# to run the script use the command below
+# python ensembleRun_script.py
+# Created by P.Paul, June 10, 2026
 # ======================================================
 
 import xarray as xr
