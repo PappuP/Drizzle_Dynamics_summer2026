@@ -25,7 +25,9 @@ Follow the instraction given with the code and its straightforward too
 
 icase defination is here:KiD-A/src/test_case.f90
 
-Add MG2 code in KiD: # we only enale MG2 so no MG1.5 avaiable 
+
+
+Add MG2 code in KiD: # we only enale MG2 so no MG1.5 avaiable, KiD MG2 version not avaiabvle open.
 in switches.f90
 !,imphys_mg1_5 = 13 &
 ,imphys_mg2 = 14
